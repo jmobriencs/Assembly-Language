@@ -28,7 +28,7 @@ _MainProc PROC
         
         mov     edx, 0                      ; clear EDX register
         mov     ebx, 100                    ; move 100 into EBX for future division
-        cdq								    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
+        cdq				    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
         idiv    ebx                         ; see if year (EAX value) is divisible by 100 (current EBX value)
         
         cmp     edx, 0                      ; check if remainder is 0
@@ -38,7 +38,7 @@ _MainProc PROC
         mov     eax, year                   ; move year back into EAX
         mov     edx, 0                      ; clear EDX register
         mov     ebx, 400                    ; move 400 into EBX for future division
-        cdq								    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
+        cdq				    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
         idiv    ebx                         ; check if year is divisible by 400 (current EBX value)
 
         cmp     edx, 0                      ; check if remainder is 0
@@ -49,7 +49,7 @@ _MainProc PROC
         mov     eax, year                   ; move year back into EAX
         mov     edx, 0                      ; clear EDX register
         mov     ebx, 4                      ; move 4 into EBX for future division
-        cdq								    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
+        cdq				    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
         idiv    ebx                         ; check if year is divisible by 4
 
         cmp     edx, 0                      ; check if remainder is 0
