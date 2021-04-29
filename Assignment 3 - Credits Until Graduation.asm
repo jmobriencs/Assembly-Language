@@ -1,6 +1,5 @@
 ; Assignment 3
 ; Author:  John-Michael O'Brien 
-; ID:      w1890922
 ; Date:    2/14/21
 ; This program takes in a student name, degree name, credits earned and credits needed
 ; and calculates the remaining number of credits needed to earn a degree.
