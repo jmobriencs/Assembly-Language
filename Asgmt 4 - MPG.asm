@@ -1,6 +1,5 @@
 ; Assignment 4 - Question 1
 ; Author:  John-Michael O'Brien 
-; ID:      w1890922
 ; Date:    2/14/21
 ; This program takes in how many miles that a car can drive on a full tank of gas (range),
 ; and the number of gallons the tank can hold and then calculates the MPG the car gets.
