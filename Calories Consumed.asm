@@ -32,19 +32,19 @@ _MainProc PROC
         
         mov         eax, cookiesPerBag                      ; move cookiesPerBag into EAX
         mov         ebx, servingsPerBag                     ; move servingsPerBag into EBX
-        cdq				                                    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
+        cdq				                    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
         idiv        ebx                                     ; divide EAX by EBX (30/10)
         mov         servingSize, eax                        ; move whats in EAX to servingSize variable (now 3 cookies)
         
         mov         eax, caloriesPerServing                 ; move caloriesPerServing to EAX
-        cdq				                                    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
+        cdq				                    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
         idiv        servingSize                             ; divide EAX by servingSize (240/3)
         mov         caloriesPerCookie, eax                  ; move from EAX and store in caloriesPerCookie variable
 
         mov         eax, cookiesEaten                       ; move cookiesEaten back into EAX
         imul        eax, caloriesPerCookie                  ; multiply what is in the EAX (cookiesEaten) by number of caloriesPerCookie
         dtoa        totalCalories, eax                      ; move whats in EAX to totalCalories variable      
-        output      resultLbl, totalCalories		        ; output label and total calories user consumed
+        output      resultLbl, totalCalories		    ; output label and total calories user consumed
         
         mov         eax, 0                                  ; exit with return code 0
         ret
