@@ -29,12 +29,12 @@ _MainProc PROC
         input       promptRange, string, 40                 ; read ASCII characters
         atod        string                                  ; convert to integer, and store in EAX register
 
-        cdq								                    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
-        idiv	    tankCapacity						    ; divide EAX (vehicle range) by tankCapacity
-        dtoa        MPG, eax			                    ; convert to ASCII characters and store in MPG variable
-        output      resultLbl, MPG		                    ; output label and MPG
+        cdq						    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
+        idiv	    tankCapacity			    ; divide EAX (vehicle range) by tankCapacity
+        dtoa        MPG, eax			            ; convert to ASCII characters and store in MPG variable
+        output      resultLbl, MPG		            ; output label and MPG
 
-        mov        eax, 0                                   ; exit with return code 0
+        mov         eax, 0                                  ; exit with return code 0
         ret
 
 _MainProc ENDP
