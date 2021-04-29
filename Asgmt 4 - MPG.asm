@@ -1,5 +1,6 @@
 ; Assignment 4 - Question 1
 ; Author:  John-Michael O'Brien 
+; ID:      w1890922
 ; Date:    2/14/21
 ; This program takes in how many miles that a car can drive on a full tank of gas (range),
 ; and the number of gallons the tank can hold and then calculates the MPG the car gets.
@@ -28,12 +29,12 @@ _MainProc PROC
         input       promptRange, string, 40                 ; read ASCII characters
         atod        string                                  ; convert to integer, and store in EAX register
 
-        cdq						    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
-        idiv	    tankCapacity			    ; divide EAX (vehicle range) by tankCapacity
-        dtoa        MPG, eax			            ; convert to ASCII characters and store in MPG variable
-        output      resultLbl, MPG		            ; output label and MPG
+        cdq								                    ; since idiv uses EDX:EAX, cdq extends the sign of EAX to EDX
+        idiv	    tankCapacity						    ; divide EAX (vehicle range) by tankCapacity
+        dtoa        MPG, eax			                    ; convert to ASCII characters and store in MPG variable
+        output      resultLbl, MPG		                    ; output label and MPG
 
-        mov         eax, 0                                  ; exit with return code 0
+        mov        eax, 0                                   ; exit with return code 0
         ret
 
 _MainProc ENDP
