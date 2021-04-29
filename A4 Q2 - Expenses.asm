@@ -1,6 +1,5 @@
 ; Assignment 4 - Question 2
 ; Author:  John-Michael O'Brien 
-; ID:      w1890922
 ; Date:    3/4/21
 ; This program takes in a rent/mortgage payment, utilities, phone, and cable bills.
 ; It then displays the monthly cost of these expenses as well as the annual cost. 
