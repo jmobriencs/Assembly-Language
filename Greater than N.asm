@@ -9,7 +9,7 @@
 .586
 .MODEL FLAT
 
-INCLUDE io.h            ; header file for input/output
+INCLUDE io.h                 ; header file for input/output
 
 .STACK 4096
 
